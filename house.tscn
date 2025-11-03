@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfa67yxt7go50"]
+
+[ext_resource type="Texture2D" uid="uid://b6snongiuu8kx" path="res://room_inner.png" id="1_hfkix"]
+[ext_resource type="Texture2D" uid="uid://b1t5q655l7q47" path="res://room_outter.png" id="2_metfq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6syyc"]
+
+[node name="House" type="Node2D"]
+
+[node name="room_inner" type="Sprite2D" parent="."]
+texture = ExtResource("1_hfkix")
+
+[node name="room_outer" type="Sprite2D" parent="."]
+texture = ExtResource("2_metfq")
+
+[node name="wall_outer" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_6syyc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wall_outer"]
+build_mode = 1
+polygon = PackedVector2Array(-50, 5, -207, 84, -31, 173, 126, 94)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(15, 149, 56, 156, 87, 138, 83, 116)

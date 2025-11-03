@@ -33,8 +33,8 @@ func iso_input_dir(raw: Vector2) -> Vector2:
 	return q.normalized()  # 兜底
 
 func _physics_process(delta: float) -> void:
-	var raw := Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down")
-	var dir := iso_input_dir(raw)            # ✅ 满足你的需求的方向
+	var raw_vec := Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down")
+	var dir := iso_input_dir(raw_vec)            # ✅ 满足你的需求的方向
 
 	if dir != Vector2.ZERO:
 		last_dir = dir

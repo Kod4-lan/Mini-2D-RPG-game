@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://db1kshl3tf17h" path="res://tile_set.tres" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://bhmgxkffxxvl" path="res://assets/mainMap_test.png" id="1_tlwt5"]
-[ext_resource type="PackedScene" uid="uid://df0rh6gjivbdb" path="res://player.tscn" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://df0rh6gjivbdb" path="res://Player/player.tscn" id="2_0e48y"]
 
 [node name="World" type="Node2D"]
 
